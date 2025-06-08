@@ -40,3 +40,25 @@ console.log(typeof heros); //object
 //     Arrays => object 
 //     Function => function 
 //     Object => object 
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+// JavaScript is a dynamically typed language. This means that you don't need to specify the data type of a variable when you declare it.
+let myYoutubename = "anirudhguptadotcom"
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "anirudh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
