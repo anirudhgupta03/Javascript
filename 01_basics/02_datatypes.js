@@ -6,12 +6,15 @@ let flag = true;
 let age = 25;
 let name = "Anirudh";
 
-//number 
-//string
-//boolean
+// number 
+// bigint
+// string => ""
+// boolean => true/false
 // null = stand alone value (type = object)
 // undefined = kindda place holder for a value which is not defined yet (type = undefined)
 // symbol = uniquness
+
+//object
 
 console.log(typeof null); //object
 console.log(typeof undefined); //undefined
