@@ -1,3 +1,4 @@
+// Based on how the data is kept in the memory - By Value or By Reference
 // Primitive (Call by value)
 
 // 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt

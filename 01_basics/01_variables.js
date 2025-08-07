@@ -5,21 +5,27 @@
 // Prefer not to use var because of issue in block scope and functional scope
 // In initial days JS didn't work on scope, that was a problem
 
-const accountId = 3432523
-let accountEmail = "anirudh.ag.gupta@oracle.com"
-var accountPassword = "12345"
-let accountState
-accountCity = "Jaipur"
+const accountId = 3432523;
+let accountEmail = "anirudh.ag.gupta@oracle.com";
+var accountPassword = "12345";
+let accountState;
+accountCity = "Jaipur";
 
 // accountId = 2         // Not Allowed
 
-accountEmail = "ag@ag.com"
+accountEmail = "ag@ag.com";
 {
-    const accountId = 1
-    var accountPassword = "342342"          //original variable will also get changed
+  const accountId = 1;
+  var accountPassword = "342342"; //original variable will also get changed
 }
-accountCity = "Hyderabad"
+accountCity = "Hyderabad";
 
-console.log(accountId)
+console.log(accountId);
 
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+console.table([
+  accountId,
+  accountEmail,
+  accountPassword,
+  accountCity,
+  accountState,
+]);
