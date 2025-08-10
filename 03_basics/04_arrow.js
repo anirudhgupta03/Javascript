@@ -12,12 +12,13 @@ user.welcomeMessage()       //anirudh , welcome to website
 user.username = "hitesh"
 user.welcomeMessage()       //hitesh , welcome to website
 
-console.log(this)       //node environment {}
+console.log(this)       //node environment {} 
 
 // Previously the engine used to run js was present only
 // in browser, but in current time, we have various engines to run js
 // like node, deno etc.
 
+//context cannot be accessed using 'this' keyword in arrow functions
 // function chai(){
 //     let username = "hitesh"
 //     console.log(this)
@@ -54,12 +55,12 @@ console.log(this)       //node environment {}
 //     console.log(this.username)      //undefined
 // }
 
-// const chai = () => {
-//     let username = "hitesh"
-//     console.log(this)               //{}
-//     console.log(this.username)      //undefined
-// }
-// chai()
+const chai = () => {
+    let username = "hitesh"
+    console.log(this)               //{}
+    console.log(this.username)      //undefined
+}
+chai()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2;

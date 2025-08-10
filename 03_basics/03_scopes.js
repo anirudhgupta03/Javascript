@@ -45,8 +45,9 @@ function addone(num){
     return num + 1
 }
 
-//expression
+//Expression
 // addTwo(5)       //Cannot access 'addTwo' before initialization
+//Hoisting - https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
 const addTwo = function(num){
     return num + 2
 }

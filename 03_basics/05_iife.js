@@ -1,6 +1,8 @@
 //Immediately Invoked Function Expressions (IIFE)
+//https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 
 (function chai(){
+    //named iife
     console.log(`DB CONNNECTED`)
 })();
 //semicolon is necessary as the function is invoked
@@ -13,5 +15,6 @@
 
 
 ((name) => {
+    //unnamed iife
     console.log(`DB CONNECTED TWO ${name}`)
 })('hitesh');

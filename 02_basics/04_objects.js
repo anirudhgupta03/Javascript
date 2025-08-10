@@ -25,7 +25,9 @@ const obj2 = {3: "a", 4: "b"}
 // const obj3 = {...obj1, ...obj2}     //{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' 
 // console.log(obj3)
 
-// The Object.assign() static method copies the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+//The Object.assign() static method copies the values of all of the enumerable own properties from one or 
+//more source objects to a target object. Returns the target object.
 const obj3 = Object.assign({}, obj1, obj2)     
 // const returnedTarget = Object.assign(target, source) 
 // console.log(returnedTarget === target)              //true    
@@ -75,6 +77,7 @@ console.log(instructor)
 
 // APIs
 //JSON format (Javascript Object Notation)
+//In JSON , keys are strings
 // {
 //     "name": "hitesh", 
 //     "coursename": "js in hindi",
@@ -86,3 +89,7 @@ console.log(instructor)
     {},
     {}
 ]
+
+const test = () => {
+
+}
