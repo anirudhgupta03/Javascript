@@ -35,11 +35,19 @@ if(Object.keys(obj).length === 0){
     console.log("Empty Object")
 }
 
-//Nullish Coalescing Operator (??)
-// let val1
-// val1 = 5 ?? 10      //5
-// val1 = null ?? 10   //10
-// val1 = undefined ?? 15 // 15
-// val1 = null ?? 10 ?? 15  //10
+/*
+   false == 0  // true
+   false == '' //true
+   0 == ''     //true
+*/
 
+/* 
+Nullish Coalescing Operator (??)
+
+let val1
+val1 = 5 ?? 10      //5
+val1 = null ?? 10   //10
+val1 = undefined ?? 15 // 15
+val1 = null ?? 10 ?? 15  //10
 console.log(val1)
+*/
