@@ -1,4 +1,8 @@
-// ------ for in -------
+/* ------ for in -------
+/ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+The for...in statement iterates over all enumerable string properties of an object (ignoring properties keyed by symbols), 
+including inherited enumerable properties.
+*/
 const myObject = {
     js: 'javascript',
     cpp: 'c++', 
@@ -21,6 +25,7 @@ map.set('USA', "United States of America")
 map.set('Fr', "France")
 map.set('IN', "India")
 
+//Map is not iteratable so, for in cannot be used for Maps
 for(const key in map){
     console.log(key)
 }

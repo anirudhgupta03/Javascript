@@ -9,6 +9,10 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // console.log(values)
 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+// The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to 
+// just the elements from the given array that pass the test implemented by the provided function.
+
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const newNums = myNums.filter( (num) => num > 4)
