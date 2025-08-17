@@ -1,0 +1,19 @@
+Javascript
+
+-- Synchronous
+-- Single Threaded
+
+Exceution Control
+
+-- Execute one line of code at a time
+-- console log -> 1
+-- console log -> 2 
+-- CALL STACK 
+-- MEMORY HEAP
+-- Each operation waits for the last one to complete
+
+
+Blocking Code                        VS             Non Blocking Code 
+
+Block the flow of the program,                     Does not block Exceution
+Read file Sync                                     Read file Async

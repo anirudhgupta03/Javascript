@@ -12,7 +12,7 @@
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li id = "owl-li"><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
@@ -26,40 +26,78 @@
      // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    /* 
+    https://developer.mozilla.org/en-US/docs/Web/API/Event
+    event has following properties:-
+    type, timestamp, defaultPrevented
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode
+    */
     
     //capturing - top to bottom
-    //bubbling - bottom to top
+    //bubbling - bottom to top (img -> li -> ul)
 
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, false)
+    //https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    // addEventListener(type, listener, useCapture)
+    /*
+    A boolean value indicating whether events of this type will be dispatched to the registered listener before being 
+    dispatched to any EventTarget beneath it in the DOM tree. Events that are bubbling upward through the tree will not 
+    trigger a listener designated to use capture. Event bubbling and capturing are two ways of propagating events that 
+    occur in an element that is nested within another element, when both elements have registered a handle for that event. 
+    The event propagation mode determines the order in which elements receive the event. See the DOM spec and JavaScript Event 
+    order for a detailed explanation. If not specified, useCapture defaults to false.
+    useCapture - false - bubble
+    useCapture - true - capture
+    */
+    
+    //bubble
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked");
-        e.stopPropagation()
-    }, false)
+    // document.getElementById('owl-li').addEventListener('click', function(e){
+    //     console.log("clicked inside the li");
+    // }, false)
+    
+    // // https://www.geeksforgeeks.org/javascript/what-is-event-propagation-capturing-bubbling/
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     // e.stopPropagation()                 //if we don't keep it then when we click on owl, line 43 also gets called as owl is inside li which is inside ul
+    // }, false)
+
+    // capture
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl-li').addEventListener('click', function(e){
+    //     console.log("clicked inside the li");
+    // }, true)
+    
+    // // https://www.geeksforgeeks.org/javascript/what-is-event-propagation-capturing-bubbling/
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     // e.stopPropagation()                 //if we don't keep it then when we click on owl, line 43 also gets called as owl is inside li which is inside ul
+    // }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.stopPropagation()                    //stop bubbling/capturing
     //     console.log("google clicked");
     // }, false)
    
     
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()
+    //     }
     
         
-    })
+    // })
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
